@@ -5,7 +5,7 @@ const endpointsFiles = ['./src/routes/index.js']
 const doc = {
     info: {
         version: "1.0.0",
-        title: "API to consult bank slip and payment of concessionaires",
+        title: "API to consult bank slip and payment of insurances",
     },
     host: "localhost:8080",
     basePath: "/",

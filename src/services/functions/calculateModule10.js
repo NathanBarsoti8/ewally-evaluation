@@ -2,6 +2,7 @@ function calculateModule10(field) {
     const sizeField = field.length - 1
     let code = field.substr(0, sizeField)
     let sum = 0
+    let dv = 0
 
     code = strrev(code)
 
@@ -21,10 +22,11 @@ function calculateModule10(field) {
         if (code.length == index + 1) {
             //calculate next ten immediately upper to the sum
             const nextTen = Math.ceil(sum / 10) * 10
-
-            return nextTen - sum
+            dv = nextTen - sum
         }
     }
+
+    return dv
 }
 
 function strrev(string) {

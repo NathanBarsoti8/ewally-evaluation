@@ -1,7 +1,7 @@
 {
   "name": "evaluation",
   "version": "1.0.0",
-  "description": "API to consult bank slip and payment of concessionaires",
+  "description": "API to consult bank slip and payment of insurances",
   "main": "app.js",
   "scripts": {
     "inital": "npm install && node swagger.js && node app.js",

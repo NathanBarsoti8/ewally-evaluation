@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "API to consult bank slip and payment of concessionaires",
+    "title": "API to consult bank slip and payment of insurances",
     "description": ""
   },
   "host": "localhost:8080",
