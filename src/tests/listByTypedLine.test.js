@@ -9,6 +9,15 @@ describe("List by tiped line service", () => {
             .expect(404)
     })
 
+    it("Typed line special characters", async () => {
+        const typedLineWithSpecialCharacters = "/*-"
+
+        await request.get(`${DEFAULT_ROUTE}/${typedLineWithSpecialCharacters}`)
+            .expect(400, {
+                message: "Need to send typedLine in route params to complete request."
+            })
+    })
+
     it("Typed line with letters", async () => {
         const typedLineWithLetters = "21290001192110001210904475617405975870000002wwp"
 
