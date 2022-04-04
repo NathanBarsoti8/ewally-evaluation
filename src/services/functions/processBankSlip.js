@@ -34,7 +34,7 @@ function processBankSlip(typedLine) {
 
             if (dv != field[field.length - 1]) {
                 bankSlip.isValid = false
-                bankSlip.errMessage = `Invalid typed line. The check digit of field ${index + 1} doesn't match.`
+                bankSlip.errMessage = "Invalid typed line. The check digit of field doesn't match."
 
                 return bankSlip
             }

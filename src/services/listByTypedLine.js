@@ -52,14 +52,14 @@ function validateTypedLine(typedLine) {
     }
     else if (!validate.type) {
         validate.isValid = false
-        validate.errMessage = `Invalid line. The typeable line must contain 47 characters for banks and for insurances must contain 48 characters. The typed line entered contains ${cleanTypedLine.length} characters.`
+        validate.errMessage = `Invalid line. The typed line must contain 47 characters for banks and for insurances must contain 48 characters. The typed line entered contains ${cleanTypedLine.length} characters.`
     }
     else {
         const hasLetters = containLetters(cleanTypedLine)
 
         if (hasLetters) {
             validate.isValid = false
-            validate.errMessage = "The typeable line must contain only number, the typed line has letters."
+            validate.errMessage = "The typed line must contain only number, the typed line has letters."
         }
     }
 
