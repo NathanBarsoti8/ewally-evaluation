@@ -4,9 +4,10 @@
   "description": "API to consult bank slip and payment of concessionaires",
   "main": "app.js",
   "scripts": {
+    "inital": "npm install && node swagger.js && node app.js",
     "dev": "node swagger.js && nodemon app.js",
     "start": "node app.js",
-    "test": "node swagger.js && jest"
+    "test": "node swagger.js && jest --coverage"
   },
   "repository": {
     "type": "git",
