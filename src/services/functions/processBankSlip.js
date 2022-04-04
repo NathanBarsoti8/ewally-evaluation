@@ -1,4 +1,3 @@
-const { findExpirationDate } = require('./findExpirationDate')
 const { findAmount } = require('./findAmount');
 const { calculateModule10 } = require('./calculateModule10')
 
@@ -43,7 +42,7 @@ function processBankSlip(typedLine) {
 
         //validate dv from bar code
         if (index === 3) {
-            const dvBarCode = calcDVBarCode(barCode)
+            const dvBarCode = calculateModule11(barCode)
 
             if (dvBarCode != field) {
                 bankSlip.isValid = false
@@ -72,7 +71,7 @@ function processBankSlip(typedLine) {
     return bankSlip
 }
 
-function calcDVBarCode(barCode) {
+function calculateModule11(barCode) {
     const number = barCode.substr(0, 4) + barCode.substr(5, 39)
     const count = number.length - 1
 
@@ -99,6 +98,19 @@ function calcDVBarCode(barCode) {
     }
 
     return dv
+}
+
+function findExpirationDate(factor) {
+    let expirationDate = new Date()
+
+    expirationDate.setFullYear(1997)
+    expirationDate.setMonth(9)
+    expirationDate.setDate(7)
+
+    expirationDate.setDate(expirationDate.getDate() + Number(factor))
+    expirationDate.setTime(expirationDate.getTime() + expirationDate.getTimezoneOffset() - 10800000)
+
+    return expirationDate.toISOString().substring(0, 10)
 }
 
 module.exports = {
