@@ -116,7 +116,7 @@ function strrev(string) {
 function calculateAmount({ barCode, valueRef }) {
     let amount = null
 
-    if (valueRef === 6 || valueRef === 8) {
+    if (valueRef => 6 && valueRef <= 9) {
         const valueBarCode = barCode.substr(4, 11)
         amount = findAmount(valueBarCode)
     }
