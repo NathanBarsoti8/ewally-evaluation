@@ -4,7 +4,7 @@
   "description": "API to consult bank slip and payment of insurances",
   "main": "app.js",
   "scripts": {
-    "inital": "npm install && node swagger.js && node app.js",
+    "initialUsage": "npm install && node swagger.js && node app.js",
     "dev": "node swagger.js && nodemon app.js",
     "start": "node swagger.js && node app.js",
     "test": "node swagger.js && jest --coverage"

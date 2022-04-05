@@ -14,7 +14,7 @@ Clone o projeto
 Entre no diretório. Caso nunca tenha executado o projeto, rode o seguinte comando. Ele instalará todas as dependências necessárias e iniciará a API na porta 8080.
 
 ```bash
-  npm run initial usage 
+  npm run initialUsage 
 ```
 
 Caso já tenho instalado as dependências anteriormente, rode o seguinte comando. Ele iniciará a API na porta 8080.
